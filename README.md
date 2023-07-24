@@ -28,7 +28,7 @@ Nhóm Front-End bao gồm:
 ## Nhóm Back-End
 Nhóm Back-end bao gồm các thành viên
 <p>Bạn <strong>VÕ NGUYỄN HẢI ĐĂNG</strong></p>
-<p>Bạn <strong>.................</strong></p>
+<p>Bạn <strong>NGUYỄN VĂN TUẤN</strong></p>
 <p>Phụ trách thiết kế back-end cho ứng dụng với Spring và SQL. Team sẽ thiết kế cơ sở dữ liệu chũng như xử lý các yếu tố business cho phần back-end.</p>
 <p><strong>Nhóm chú ý khi xây dựng, các Template hoặc tài nguyên sử dụng hãy copy một bản hoặc các link download tương ứng của mọi người vào Folder Tài Nguyên Chung để các thành viên khác có thể nghiên cứu sử dụng hoặc hỗ trợ khi cần thiết</strong></p>
 </details>
