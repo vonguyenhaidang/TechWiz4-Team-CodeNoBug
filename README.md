@@ -38,8 +38,7 @@ Nhóm Back-end bao gồm các thành viên
 
  ## Tài nguyên sử dụng chung
  <p>Folder tài nguyên chung sẽ chứa tài nguyên của 2 team front-end và cả back-end. 2 Team có thể truy cập vào trong folder này.</p>
- ![image](https://github.com/vonguyenhaidang/TechWiz4-Team-CodeNoBug/assets/48885752/fbae1d07-e092-4213-a4a4-06952f22d659)
-
+<img src="https://github.com/vonguyenhaidang/TechWiz4-Team-CodeNoBug/assets/48885752/fbae1d07-e092-4213-a4a4-06952f22d659"/>
 
  ## Các hạn chế
  <p>Các team chỉ lấy resource trong folder tài nguyên chung. <strong>TUYỆT ĐỐI KHÔNG TỰ Ý THAY ĐỔI HOẶC PUSH CODE VÀO FOLDER CỦA TEAM KHÁC KHI CHƯA CÓ YÊU CẦU SUPPORT.</strong></p>
