@@ -1,6 +1,6 @@
 # TechWiz4 - Team Code No Bug
 <p>Dự án này được đóng góp bởi <a href="https://github.com/vonguyenhaidang/TechWiz4-Team-CodeNoBug/graphs/contributors">các thành viên team TechWiz Aptech Saigon</a></p>
-<img src="https://github.com/vonguyenhaidang/TechWiz4-Team-CodeNoBug/assets/48885752/eb0cb1aa-9d13-4255-8e75-78fdab03627a"/>
+<img src="https://github.com/vonguyenhaidang/TechWiz4-Team-CodeNoBug/assets/48885752/ad94c056-2161-4b18-9413-3f5c1f92003c"/>
 
 ##
 <details>
@@ -17,7 +17,8 @@
 ## Nhóm Front-End
 Nhóm Front-End bao gồm:
 <p>Anh <strong>LÝ HOÀNG SƠN</strong></p>
-<p>Bạn <strong>NGUYỄN TÚ</strong></p>
+<p>Bạn <strong>NGUYỄN TÚ</strong></p
+<p>Bạn <strong>VÕ NGUYỄN HẢI ĐĂNG</strong> - Hỗ trợ nếu có</p>
 <p>Phụ trách phần Front-End sử dụng framework ReactJS. Team có thể sử dụng các Framework tương đương để tạo ra phần webpage với các redirect tương ứng.</p>
 <p><strong>Nhóm chú ý khi xây dựng, các Template hoặc tài nguyên sử dụng hãy copy một bản hoặc các link download tương ứng của mọi người vào Folder Tài Nguyên Chung để các thành viên khác có thể nghiên cứu sử dụng hoặc hỗ trợ khi cần thiết</strong></p>
 
@@ -29,6 +30,8 @@ Nhóm Front-End bao gồm:
 Nhóm Back-end bao gồm các thành viên
 <p>Bạn <strong>VÕ NGUYỄN HẢI ĐĂNG</strong></p>
 <p>Bạn <strong>NGUYỄN VĂN TUẤN</strong></p>
+<p>Bạn <strong>NGUYỄN DUY TÂN</strong></p>
+<p>Bạn <strong>LƯƠNG HỮU KHÁNH TOÀN</strong></p>
 <p>Phụ trách thiết kế back-end cho ứng dụng với Spring và SQL. Team sẽ thiết kế cơ sở dữ liệu chũng như xử lý các yếu tố business cho phần back-end.</p>
 <p><strong>Nhóm chú ý khi xây dựng, các Template hoặc tài nguyên sử dụng hãy copy một bản hoặc các link download tương ứng của mọi người vào Folder Tài Nguyên Chung để các thành viên khác có thể nghiên cứu sử dụng hoặc hỗ trợ khi cần thiết</strong></p>
 </details>
