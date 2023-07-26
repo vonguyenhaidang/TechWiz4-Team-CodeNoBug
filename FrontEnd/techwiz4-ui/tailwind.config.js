@@ -14,6 +14,9 @@ module.exports = {
             maxWidth: {
                 'custom-max-width': '1440px',
             },
+            fontFamily:{
+                'Roboto': ['Roboto', 'sans-serif']
+            }
         },
     },
     plugins: [],
