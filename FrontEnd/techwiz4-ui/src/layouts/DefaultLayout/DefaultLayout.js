@@ -8,7 +8,7 @@ import Footer from '../component/Footer/Footer';
 
 function DefaultLayout({ children }) {
     return (
-        <div className="max-w-custom-max-width px-24 text-base mx-auto bg-slate-200">
+        <div className="max-w-custom-max-width font-Roboto px-24 text-base mx-auto bg-slate-200">
             <Header />
             <Banner />
             <NewProduct />
