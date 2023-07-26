@@ -3,7 +3,8 @@ import Banner from '../component/Banner';
 import NewProduct from '../component/NewProduct/NewProduct';
 import Story from '../component/Story/Story';
 import FeaturedProduct from '../component/FeaturedProduct/FeaturedProduct';
-import Sidebar from '../component/Footer/Footer';
+import Sidebar from '../component/Footer/Sidebar';
+import Footer from '../component/Footer/Footer';
 
 function DefaultLayout({ children }) {
     return (
@@ -14,6 +15,7 @@ function DefaultLayout({ children }) {
             <Story />
             <FeaturedProduct />
             <Sidebar />
+            <Footer/>
         </div>
     );
 }
