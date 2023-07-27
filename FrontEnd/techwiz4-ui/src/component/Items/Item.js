@@ -5,7 +5,7 @@ function Item() {
     console.log(DavidLuke)
     return (  
         <div className='w-custom-width-item h-custom-height-item bg-slate-50 flex flex-col items-center'>
-            <div className="h-5/6 py-12"><img src={DavidLuke} alt='' className="border border-1 border-black h-full w-80 "/></div>
+            <div className="h-5/6 py-12"><img src={DavidLuke} alt='' className="border border-1 border-black h-full"/></div>
             <div className='h-1/6 place-items-center flex flex-row w-5/6'>
                 <div className='flex flex-col basis-2/3'>
                     <div className=' text-left text-3xl'> Tên sản phẩm</div>

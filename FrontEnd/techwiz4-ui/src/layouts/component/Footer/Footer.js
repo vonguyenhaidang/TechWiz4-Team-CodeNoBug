@@ -38,7 +38,6 @@ function Footer() {
                         <input className="w-full h-12 mb-6 font-bold text-xl" type="text" placeholder="Email address" />
                         <button className="w-full h-16 bg-yellow-700 mb-6 text-xl font-bold text-white" type="button">Subscribe Now</button>
                     </div>
-    
                 </div>
             </div>
         </>
