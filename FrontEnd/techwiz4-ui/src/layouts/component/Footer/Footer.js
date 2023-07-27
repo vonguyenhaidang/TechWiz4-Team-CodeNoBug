@@ -3,7 +3,7 @@ function Footer() {
         <>
             <hr className="mt-6"/>
             <div className="flex flex-row w-full mt-20 bg-slate-400">
-                <div className="basis-1/6 px-2 m-0 items-center w-full">
+                <div className="basis-1/6 px-4 py-4 m-0 items-center w-full">
                     <ul className=" flex flex-col gap-8 text-2xl font-semibold">
                         <li className="px-0 cursor-pointer">Home:</li>
                         <li className="px-0 cursor-pointer ">Store: </li>
