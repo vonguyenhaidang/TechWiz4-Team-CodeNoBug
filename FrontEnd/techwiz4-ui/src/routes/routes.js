@@ -1,9 +1,9 @@
 import config from '../config';
 
 import Home from '../page/Home/Home';
-import Category from '../page/Category';
-import ProductionInfor from '../page/ProductionInfor';
-import Cart from '../page/Cart';
+import Category from '../page/Category/Category';
+import ProductionInfor from '../page/ProductionInfor/ProductionInfor';
+import Cart from '../page/Cart/Cart';
 
 // import { HeaderOnly } from '~/layouts';
 

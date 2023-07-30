@@ -1,46 +1,91 @@
+import { HStack, Button, GridItem, Grid, Flex } from '@chakra-ui/react';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { Text, Input } from '@chakra-ui/react';
 function Footer() {
     return (
-        <>
-            <hr className="mt-6"/>
-            <div className="flex flex-row w-full mt-20 bg-slate-400">
-                <div className="basis-1/6 px-4 py-4 m-0 items-center w-full">
-                    <ul className=" flex flex-col gap-8 text-2xl font-semibold">
-                        <li className="px-0 cursor-pointer">Home:</li>
-                        <li className="px-0 cursor-pointer ">Store: </li>
-                        <li className="px-0 cursor-pointer">About:</li>
-                        <li className="px-0 cursor-pointer">Block:</li>
-                        <li className="px-0 cursor-pointer">Point of Sale: </li>
-                    </ul>
-                </div>
-                <div className="basis-1/3 px-0 m-0 items-left w-full">
-                    <ul className="flex flex-col gap-8 text-2xl font-semibold">
-                        <li className="px-6 cursor-pointer ">www.abc.com.vn</li>
-                        <li className="px-6 cursor-pointer ">02 Nguyen Dinh Chi, Phu Nhuan</li>
-                        <li className="px-6 cursor-pointer text-transparent"> abc </li>
-                        <li className="px-6 cursor-pointer">+84 0000-0000</li>
-                        <li className="px-6 cursor-pointer">aptecthsaigon@gmail.com</li>
-                    </ul>
-                </div>
-                <div className="basis-1/3 px-0 m-0 items-center w-full">
-                    <div className="flex flex-col justify-start item-start px-0 m-0 h-60 text-2xl font-semibold">
-                        <span className="px-8 py-4">Shipping & Return</span>
-                        <span className="px-8 py-4">F&Q</span>
-                        <div className="flex flex-row">
-                            <span className="px-8 py-4">Twitter</span>
-                            <span className="px-8 py-4">Facebook</span>
-                            <span className="px-8 py-4">Instagram</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="basis-1/6 px-2 m-0 items-center w-full">
-                    <div className="flex flex-col justify-center items-start">
-                        <span className="text-2xl font-bold mb-6">Receive all our news and updates</span>
-                        <input className="w-full h-12 mb-6 font-bold text-xl" type="text" placeholder="Email address" />
-                        <button className="w-full h-16 bg-yellow-700 mb-6 text-xl font-bold text-white" type="button">Subscribe Now</button>
-                    </div>
-                </div>
+        <footer className="w-full bg-white py-8 flex justify-center">
+            <div className="max-w-custom-max-width flex justify-center w-full">
+                <Grid templateColumns={{ md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }} gap={[4, 4, 6]} paddingY={'4rem'}>
+                    <GridItem>
+                        <ul className="w-full  font-semibold">
+                            <Flex
+                                direction={'column'}
+                                justify={'center'}
+                                alignItems={{ base: 'center', md: 'center', lg: 'flex-start' }}
+                                fontSize={{ base: '16px', sm: '16px', md: '18px', lg: '2xl', xl: '2xl' }}
+                                gap={6}
+                            >
+                                <Text cursor="pointer">Home</Text>
+                                <Text cursor="pointer">Category</Text>
+                                <Text cursor="pointer">About</Text>
+                                <Text cursor="pointer">Point of Sale</Text>
+                            </Flex>
+                        </ul>
+                    </GridItem>
+                    <GridItem>
+                        <Flex
+                            direction={'column'}
+                            alignItems={{ base: 'center', md: 'center' }}
+                            fontSize={'2xl'}
+                            fontWeight={'600'}
+                            gap={[2, 4, 6]}
+                        >
+                            <Text>www.abc.com.vn</Text>
+                            <Text>02 Nguyen Dinh Chinh, Phu Nhuan</Text>
+                            <Text>+84 0000-0000</Text>
+                            <Text>aptecthsaigon@gmail.com</Text>
+                        </Flex>
+                    </GridItem>
+                    <GridItem>
+                        <Flex
+                            width={'100%'}
+                            height={'100%'}
+                            direction={'column'}
+                            alignItems={{ base: 'center', md: 'center' }}
+                            justifyContent="space-around"
+                            gap='2rem'
+                            padding={{md:'4rem'}}
+                        >
+                            <Text fontSize={"2xl"} fontWeight={"600"} px="2rem" lineHeight="">
+                                Shipping & Return
+                            </Text>
+                            <Text fontSize={"2xl"} fontWeight={"600"}>F&Q</Text>
+                            <div>
+                                <HStack>
+                                    <Button colorScheme="facebook" leftIcon={<FaFacebook />}>
+                                        Facebook
+                                    </Button>
+                                    <Button colorScheme="twitter" leftIcon={<FaTwitter />}>
+                                        Twitter
+                                    </Button>
+                                    <Button colorScheme="pink" leftIcon={<FaInstagram />}>
+                                        Instagram
+                                    </Button>
+                                </HStack>
+                            </div>
+                        </Flex>
+                    </GridItem>
+                    <GridItem>
+                        <Flex className="w-full" direction={'column'} alignItems={{ base: 'center', md: 'center' }} justifyContent="space-around" marginX='1rem' gap='1rem' padding={{base:'6rem', md:'4rem',lg:'2rem'}}>
+                            <Text fontSize={"2xl"} fontWeight={"600"}>Receive all our news and updates</Text>
+                            <Input
+                                borderColor="black"
+                                borderWidth="2px"
+                                borderRadius="md"
+                                size="md"
+                                focusBorderColor="black"
+                                placeholder="Email Address"
+                                placeholderTextColor="black"
+                                height={'3rem'}
+                            />
+                            <Button colorScheme="yellow" width={'100%'} color={'white'} height={"3rem"}>
+                                Subscribe Now
+                            </Button>
+                        </Flex>
+                    </GridItem>
+                </Grid>
             </div>
-        </>
+        </footer>
     );
 }
 
