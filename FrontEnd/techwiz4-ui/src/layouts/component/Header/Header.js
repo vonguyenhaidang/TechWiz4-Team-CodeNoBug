@@ -1,19 +1,72 @@
+import { NavLink } from 'react-router-dom';
+import { Flex, Box, Button, useDisclosure,Icon } from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { BsMinecart } from 'react-icons/bs';
+
 function Header() {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
     return (
-        <header className="w-full">
-            <nav className="flex flex-row justify-between px-0 m-0 h-60 items-center">
-                <div className="logo basis-2/6 text-center font-bold text-4xl">GIOVANNI</div>
-                <ul className="flex flex-row basis-3/6 justify-end gap-8 text-lg font-bold">
-                    <li className="px-6 py-3 cursor-pointer text-3xl">Home</li>
-                    <li className="px-6 py-3 cursor-pointer text-3xl">Store</li>
-                    <li className="px-6 py-3 cursor-pointer text-3xl">About</li>
-                    <li className="px-6 py-3 cursor-pointer text-3xl">Point of Sale</li>
-                </ul>
-                <ul className="basis-1/6 flex ml-8 font-bold text-3xl">
-                    <li>Cart</li>
-                </ul>
-            </nav>
-        </header>
+        <Flex
+            maxWidth={'1440px'}
+            mx={'auto'}
+            as="nav"
+            align="center"
+            justify="space-between"
+            wrap="wrap"
+            padding="1rem"
+            color="black"
+        >
+            <Box>
+                <Box fontSize={{ base: '2xl', md: '4xl' }} fontWeight="bold">
+                    GIOVANNI
+                </Box>
+            </Box>
+            {/* Toggle button cho responsive */}
+            <Button
+                display={{ base: 'block', md: 'none' }}
+                onClick={isOpen ? onClose : onOpen}
+                size={'lg'}
+                colorScheme="gray"
+            >
+                {isOpen ? <CloseIcon /> :<HamburgerIcon />}
+            </Button>
+
+            {/* Danh sách các mục menu */}
+            <Box
+                display={{ base: isOpen ? 'block' : 'none', md: 'flex' }}
+                width={{ base: 'full', md: 'auto' }}
+                justifyContent={{ base: 'center', md: 'end' }}
+                alignItems="center"
+                flexGrow={1}
+                fontWeight={{ base: '600' }}
+                fontSize={{ base: '4xl', md: '4xl' }}
+                padding={{ md: '1rem' }}
+            >
+                <Flex
+                    align={{ base: 'center' }}
+                    justify={{ base: 'center', md: 'flex-end' }}
+                    direction={{ base: 'column', md: 'row' }}
+                    spacing={8}
+                >
+                    <Box _hover={{ bg: 'gray.100' }} cursor="pointer" padding={{ base: '1rem' }}>
+                        <NavLink to="/">Home</NavLink>
+                    </Box>
+                    <Box _hover={{ bg: 'gray.100' }} cursor="pointer" padding={{ base: '1rem' }}>
+                        <NavLink to="/category">Category</NavLink>
+                    </Box>
+                    <Box _hover={{ bg: 'gray.100' }} cursor="pointer" padding={{ base: '1rem' }}>
+                        <NavLink to="/about">About</NavLink>
+                    </Box>
+                    <Box _hover={{ bg: 'gray.100' }} cursor="pointer" padding={{ base: '1rem' }}>
+                        <NavLink to="/pointofsale">Point of Sale</NavLink>{' '}
+                    </Box>
+                </Flex>
+            </Box>
+            <Box  display={{base:'none',md:'block'}}>
+             <Icon as={BsMinecart} boxSize={{base:'3rem', md:'3rem'}}/>
+            </Box>
+        </Flex>
     );
 }
 
