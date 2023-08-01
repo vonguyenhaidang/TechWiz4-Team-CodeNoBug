@@ -2,10 +2,17 @@ import { NavLink } from 'react-router-dom';
 import { Flex, Box, Button, useDisclosure,Icon } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { BsMinecart } from 'react-icons/bs';
+import MainNavigation from '../../../component/MainNavi/MainNavigation';
+import Context from '../../../component/store/Context';
+import { useContext } from 'react';
+import ShopContext from '../../../component/GlobalStates/ShopContext'
 
 function Header() {
     const { isOpen, onOpen, onClose } = useDisclosure();
-
+    const context = useContext(ShopContext);
+    const storeContext = useContext(Context)
+    const [state,dispatch] =storeContext
+    const {condition}=state
     return (
         <Flex
             maxWidth={'1440px'}
@@ -65,6 +72,11 @@ function Header() {
             </Box>
             <Box  display={{base:'none',md:'block'}}>
              <Icon as={BsMinecart} boxSize={{base:'3rem', md:'3rem'}}/>
+             <MainNavigation
+                    cartItemNumber={context.cart.reduce((count, curItem) => {
+                      return count + curItem.quantity * 1;
+                    }, 0)}
+                  />
             </Box>
         </Flex>
     );

@@ -1,4 +1,4 @@
-import Banner from '../../layouts/component/Banner/Banner';
+import Banner from '../../layouts/component/Banner';
 import NewProduct from '../../layouts/component/NewProduct';
 import Story from '../../layouts/component/Story/Story';
 import FeaturedProduct from '../../layouts/component/FeaturedProduct';
@@ -9,8 +9,7 @@ function Home() {
             <Banner />
             <NewProduct />
             <Story />
-            <FeaturedProduct />
-            
+            <FeaturedProduct />    
         </div>
     );
 }

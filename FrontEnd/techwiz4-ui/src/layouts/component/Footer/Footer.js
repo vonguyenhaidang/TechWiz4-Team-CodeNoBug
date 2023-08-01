@@ -66,7 +66,14 @@ function Footer() {
                         </Flex>
                     </GridItem>
                     <GridItem>
-                        <Flex className="w-full" direction={'column'} alignItems={{ base: 'center', md: 'center' }} justifyContent="space-around" marginX='1rem' gap='1rem' padding={{base:'6rem', md:'4rem',lg:'2rem'}}>
+                        <Flex 
+                        className="w-full" 
+                        direction={'column'} 
+                        alignItems={{ base: 'center', md: 'center' }} 
+                        justifyContent="space-around" 
+                        marginX='1rem' gap='1rem' 
+                        padding={{base:'6rem', md:'4rem',lg:'2rem'}}
+                        >
                             <Text fontSize={"2xl"} fontWeight={"600"}>Receive all our news and updates</Text>
                             <Input
                                 borderColor="black"
