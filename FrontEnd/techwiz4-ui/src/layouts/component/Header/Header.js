@@ -6,6 +6,7 @@ import MainNavigation from '../../../component/MainNavi/MainNavigation';
 import Context from '../../../component/store/Context';
 import { useContext } from 'react';
 import ShopContext from '../../../component/GlobalStates/ShopContext'
+import Search from './Search';
 
 function Header() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -28,6 +29,9 @@ function Header() {
                 <Box fontSize={{ base: '2xl', md: '4xl' }} fontWeight="bold">
                     GIOVANNI
                 </Box>
+            </Box>
+            <Box>
+                <Search />
             </Box>
             {/* Toggle button cho responsive */}
             <Button
