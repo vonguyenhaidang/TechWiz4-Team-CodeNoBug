@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { Flex, Box, Button, useDisclosure,Icon } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { BsMinecart } from 'react-icons/bs';
+import Search from './Search';
 
 function Header() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -21,6 +22,9 @@ function Header() {
                 <Box fontSize={{ base: '2xl', md: '4xl' }} fontWeight="bold">
                     GIOVANNI
                 </Box>
+            </Box>
+            <Box>
+                <Search />
             </Box>
             {/* Toggle button cho responsive */}
             <Button
