@@ -1,7 +1,7 @@
 const routes = {
     home: '/',
     category: '/category',
-    productionInfor: '/productionInfor',
+    productionInfor: '/:productionInfor',
     cart: '/cart',
 };
 export default routes;

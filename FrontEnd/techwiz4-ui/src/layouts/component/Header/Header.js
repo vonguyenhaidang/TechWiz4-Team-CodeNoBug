@@ -25,23 +25,23 @@ function Header() {
             padding="1rem"
             color="black"
         >
-            <Box>
-                <Box fontSize={{ base: '2xl', md: '4xl' }} fontWeight="bold">
-                    GIOVANNI
-                </Box>
+            <Box fontSize={{ base: '2xl', md: '4xl' }} fontWeight="bold">
+                GIOVANNI
             </Box>
             <Box>
                 <Search />
             </Box>
             {/* Toggle button cho responsive */}
-            <Button
-                display={{ base: 'block', md: 'none' }}
-                onClick={isOpen ? onClose : onOpen}
-                size={'lg'}
-                colorScheme="gray"
-            >
-                {isOpen ? <CloseIcon /> :<HamburgerIcon />}
-            </Button>
+            <Box display={{ base: 'block', md: 'none' }}>
+                <Button
+                    
+                    onClick={isOpen ? onClose : onOpen}
+                    size={'lg'}
+                    colorScheme="gray"
+                >
+                    {isOpen ? <CloseIcon /> :<HamburgerIcon />}
+                </Button>
+            </Box>
 
             {/* Danh sách các mục menu */}
             <Box
@@ -49,12 +49,13 @@ function Header() {
                 width={{ base: 'full', md: 'auto' }}
                 justifyContent={{ base: 'center', md: 'end' }}
                 alignItems="center"
-                flexGrow={1}
+                // flexGrow={1}
                 fontWeight={{ base: '600' }}
                 fontSize={{ base: '4xl', md: '4xl' }}
                 padding={{ md: '1rem' }}
             >
                 <Flex
+                    // display={'flex'}
                     align={{ base: 'center' }}
                     justify={{ base: 'center', md: 'flex-end' }}
                     direction={{ base: 'column', md: 'row' }}

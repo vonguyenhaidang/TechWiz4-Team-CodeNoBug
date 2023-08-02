@@ -1,25 +1,38 @@
 import Tippy from '@tippyjs/react/headless';
+import { useEffect, useState, useRef } from 'react';
 import { Box, Spinner, Input, Button, Text } from '@chakra-ui/react';
 import { FaRegCircleXmark } from 'react-icons/fa6';
 import { BsSearch } from 'react-icons/bs';
-import { useEffect, useState, useRef } from 'react';
-import classNames from 'classnames/bind';
-import styles from './Search.module.scss';
-import ProductItem from './ProductItem';
 
-const cx = classNames.bind(styles);
+import ProductItem from './ProductItem';
+import { useDebounce } from '~/hooks';
+import * as searchServices from '~/apiServices/searchService';
+
 function Search() {
     const [searchProducts, setSearchProducts] = useState([]);
-    const [searchValue, setSearchValue] = useState([]);
+    const [searchValue, setSearchValue] = useState('');
     const [showResult, setShowResuilt] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     const inputRef = useRef();
+    const debounce = useDebounce(searchValue, 500);
 
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/users?q=lea`)
-            .then((res) => res.json())
-            .then((res) => setSearchProducts(res));
-    }, [searchValue]);
+        if (!debounce.trim()) {
+            setSearchProducts([]);
+            return;
+        }
+
+        const fetchApi = async () => {
+            setLoading(true);
+            const result = await searchServices.search(debounce);
+            setSearchProducts(result);
+            setLoading(false);
+        };
+        fetchApi();
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [debounce]);
 
     const handleClear = () => {
         setSearchValue('');
@@ -35,10 +48,9 @@ function Search() {
             interactive
             render={(attrs) => (
                 <Box
-                    className={cx('search-result')}
                     tabIndex={'-1'}
                     {...attrs}
-                    width="361px"
+                    width={{base:'100%',md:"361px"}}
                     paddingTop={'8px'}
                     maxHeight={'min((100vh-96px)-60px,734px)'}
                     minHeight="100px"
@@ -47,27 +59,23 @@ function Search() {
                     boxShadow={'md'}
                     fontSize="4xl"
                 >
-                    <div className={cx('search-resuilt')}>
-                        <Text className={cx('text-title')} fontSize="xl" fontWeight={'600'} color={'blackAlpha.500'}>
+                    <div>
+                        <Text fontSize="xl" fontWeight={'600'} color={'blackAlpha.500'}>
                             Products
                         </Text>
-
                         {searchProducts.map((product) => (
                             <ProductItem key={product.id} data={product} />
                         ))}
-                        {/* <ProductItem />
-                        <ProductItem /> */}
                     </div>
                 </Box>
             )}
             onClickOutside={handleHideResuilt}
         >
             <Box
-                className={cx('search')}
                 display={'flex'}
                 position={'relative'}
                 alignItems={'center'}
-                width={'361px'}
+                width={{base:'100%',md:'361px'}}
                 height={'46px'}
                 backgroundColor={'gray.200'}
                 borderRadius={'96px'}
@@ -76,7 +84,6 @@ function Search() {
                 _focus={{ outline: '2px solid blue', boxShadow: '0 0 5px blue' }}
             >
                 <Input
-                    className={cx('input')}
                     ref={inputRef}
                     value={searchValue}
                     flex="1"
@@ -91,24 +98,18 @@ function Search() {
                     onChange={(e) => setSearchValue(e.target.value)}
                     onFocus={() => setShowResuilt(true)}
                 />
-                {!!searchValue && (
-                    <Button
-                        className={cx('clear')}
-                        position={'absolute'}
-                        right={'52px'}
-                        height={'46px'}
-                        bg="transparent"
-                        onClick={handleClear}
-                    >
+                {!!searchValue && !loading && (
+                    <Button position={'absolute'} right={'52px'} height={'46px'} bg="transparent" onClick={handleClear}>
                         {/* clear */}
                         <FaRegCircleXmark fontSize="2rem" color="gray" />
                     </Button>
                 )}
-                {/* <Button className={cx('loading')} position={'absolute'} right={'52px'} height={'46px'} bg="transparent">
-                    <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="gray.500" size="lg" />
-                </Button> */}
+                {loading && (
+                    <Button position={'absolute'} right={'52px'} height={'46px'} bg="transparent">
+                        <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="gray.500" size="lg" />
+                    </Button>
+                )}
                 <Button
-                    className={cx('search-btn')}
                     width="52px"
                     height="46px"
                     bg="transparent"

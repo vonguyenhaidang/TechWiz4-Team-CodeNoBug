@@ -1,7 +1,7 @@
-import Banner from '../../layouts/component/Banner';
-import NewProduct from '../../layouts/component/NewProduct';
-import Story from '../../layouts/component/Story/Story';
-import FeaturedProduct from '../../layouts/component/FeaturedProduct';
+import Banner from '~/layouts/component/Banner/Banner.js';
+import NewProduct from '~/layouts/component/NewProduct';
+import Story from '~/layouts/component/Story/Story';
+import FeaturedProduct from '~/layouts/component/FeaturedProduct';
 
 function Home() {
     return (
@@ -9,7 +9,7 @@ function Home() {
             <Banner />
             <NewProduct />
             <Story />
-            <FeaturedProduct />    
+            <FeaturedProduct />
         </div>
     );
 }

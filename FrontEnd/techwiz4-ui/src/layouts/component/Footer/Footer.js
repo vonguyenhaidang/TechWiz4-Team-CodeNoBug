@@ -82,7 +82,7 @@ function Footer() {
                                 size="md"
                                 focusBorderColor="black"
                                 placeholder="Email Address"
-                                placeholderTextColor="black"
+                                _placeholder={{color:'brown'}}
                                 height={'3rem'}
                             />
                             <Button colorScheme="yellow" width={'100%'} color={'white'} height={"3rem"}>
