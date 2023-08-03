@@ -15,7 +15,7 @@ function FeaturedProduct() {
                     <Text fontSize={'4xl'} fontWeight={'600'} padding={'6rem'} align={'center'}>FEATURED PRODUCTS</Text>
                     <Grid maxWidth={'1440px'} mx={'auto'} templateColumns={{ lg: 'repeat(3, 1fr)', md: 'repeat(2, 1fr)'}} gap={6}>
                         {state.products.map((product) => {
-                        return <Item productName={product.name} key={product.id} post={product}/>   
+                        return <Item productName={product.name} key={product.id} price={product.price} post={product}/>   
                         })}
                     </Grid>
                     <div className="text-center ">
