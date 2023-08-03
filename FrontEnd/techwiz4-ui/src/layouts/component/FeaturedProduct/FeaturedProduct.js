@@ -1,4 +1,4 @@
-import Item from '~/component/Items/Item.js';
+import Item from '~/component/Items/index.js';
 import { Button, Text, Grid } from '@chakra-ui/react';
 
 import Sidebar from './Sidebar';

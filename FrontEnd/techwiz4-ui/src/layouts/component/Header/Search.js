@@ -3,7 +3,6 @@ import { useEffect, useState, useRef } from 'react';
 import { Box, Spinner, Input, Button, Text } from '@chakra-ui/react';
 import { FaRegCircleXmark } from 'react-icons/fa6';
 import { BsSearch } from 'react-icons/bs';
-
 import ProductItem from './ProductItem';
 import { useDebounce } from '~/hooks';
 import * as searchServices from '~/apiServices/searchService';

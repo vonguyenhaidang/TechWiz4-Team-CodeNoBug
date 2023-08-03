@@ -5,8 +5,8 @@ import React, { useContext } from 'react';
 import Context from '../../../component/store/Context';
 import ShopContext from '../../../component/GlobalStates/ShopContext';
 function FeaturedProduct() {
-    const context = useContext(Context)
-  const[state,dispatch] = context
+    const shopContext = useContext(Context)
+  const[state,dispatch] = shopContext
     return (
         <ShopContext.Consumer>
             {(context) => (
@@ -15,7 +15,7 @@ function FeaturedProduct() {
                     <Text fontSize={'4xl'} fontWeight={'600'} padding={'6rem'} align={'center'}>FEATURED PRODUCTS</Text>
                     <Grid maxWidth={'1440px'} mx={'auto'} templateColumns={{ lg: 'repeat(3, 1fr)', md: 'repeat(2, 1fr)'}} gap={6}>
                         {state.products.map((product) => {
-                        return <Item productName={product.name} key={product.id} post={product} />   
+                        return <Item productName={product.name} key={product.id} post={product}/>   
                         })}
                     </Grid>
                     <div className="text-center ">
