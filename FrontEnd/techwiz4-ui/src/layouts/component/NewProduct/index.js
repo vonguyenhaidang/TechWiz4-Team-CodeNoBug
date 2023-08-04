@@ -48,16 +48,17 @@ function NewProduct() {
                     <span>Khong co san pham</span>
                 )}
 
-                <div className="text-center ">
-                    <Button isLoading={loading} colorScheme={'red'} variant={'outline'} loadingText={'Dang Tai'}>
+                <div className="text-center" >
+                    <Button isLoading={loading} colorScheme={'red'} variant={'outline'} loadingText={'Dang Tai'} margin={'3rem'}>
                         Show All
                     </Button>
-                    <button
+                    <Button
                         onClick={callAPI}
-                        className="h-12 w-40 border border-solid border-black rounded-3xl font-bold text-2xl mt-32 mt-6  text-black"
+                        colorScheme={'green'} variant={'outline'}
+                        margin={'3rem'}
                     >
                         Refresh
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>

@@ -1,5 +1,3 @@
-import config from '../config';
-
 import Home from '../page/Home';
 import Category from '../page/Category';
 import ProductionInfor from '../page/ProductionInfor';
@@ -9,10 +7,11 @@ import Cart from '../page/Cart';
 
 //Public routes
 const publicRoutes = [
-    { path: config.routes.home, component: Home },
-    { path: config.routes.category, component: Category },
-    { path: config.routes.productionInfor, component: ProductionInfor },
-    { path: config.routes.cart, component: Cart },
+    { path: '/', component: Home },
+    { path: '/category', component: Category },
+    { path: '/productionInfor', component: ProductionInfor },
+    { path: '/cart', component: Cart }
+
 
     // { path: config.routes.upload, component: Upload, layout: HeaderOnly },
     // { path: config.routes.search, component: Search, layout: null },

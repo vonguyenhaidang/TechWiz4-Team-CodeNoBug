@@ -75,13 +75,18 @@ function Header() {
                     </Box>
                 </Flex>
             </Box>
-            <Box  display={{base:'none',md:'block'}}>
-             <Icon as={BsMinecart} boxSize={{base:'3rem', md:'3rem'}}/>
-             <MainNavigation
-                    cartItemNumber={context.cart.reduce((count, curItem) => {
-                      return count + curItem.quantity * 1;
-                    }, 0)}
-                  />
+            <Box  display={{base:'flex',md:'block'}}>
+                <NavLink to='/cart'>
+                    <Icon as={BsMinecart} boxSize={{base:'3rem', md:'3rem'}}/>
+                    <Box>
+                        <MainNavigation
+                            cartItemNumber={context.cart.reduce((count, curItem) => {
+                            return count + curItem.quantity * 1;
+                            }, 0)}
+                        />   
+                    </Box>
+                </NavLink>
+             
             </Box>
         </Flex>
     );
