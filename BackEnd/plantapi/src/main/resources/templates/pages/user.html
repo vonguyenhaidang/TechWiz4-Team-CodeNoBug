@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User page</title>
+</head>
+<body>
+	<h3>Đăng nhập thành công, chào <strong><span style ="color: red;" sec:authentication="name"></span></strong></h3>
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="Đăng xuất" class="btn btn-warning" />
+	</form>
+</body>
+</html>

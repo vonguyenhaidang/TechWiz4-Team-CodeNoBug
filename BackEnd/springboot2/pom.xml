@@ -61,7 +61,7 @@
     		<version>6.2.2.jre8</version>
 		</dependency>
 	</dependencies>
-
+    <packaging>jar</packaging>
 	<build>
 		<plugins>
 			<plugin>
